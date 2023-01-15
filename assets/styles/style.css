@@ -560,8 +560,8 @@ body {
           transform: rotate(180deg);
   margin-left: -6rem;
   position: relative;
-  -webkit-animation: scroll-right 1s 9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          animation: scroll-right 1s 9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  -webkit-animation: scroll-right 2.5s 9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: scroll-right 2.5s 9s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 .center__hp .text {
   position: absolute;
@@ -601,20 +601,20 @@ body {
           filter: blur(0.4rem);
 }
 .center__hp .text.appear span:nth-child(1) {
-  -webkit-animation: fade-in 1s 11.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          animation: fade-in 1s 11.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  -webkit-animation: fade-in 1s 12.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 1s 12.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 .center__hp .text.appear span:nth-child(2) {
-  -webkit-animation: fade-in 1s 11.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          animation: fade-in 1s 11.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  -webkit-animation: fade-in 1s 12.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 1s 12.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 .center__hp .text.appear span:nth-child(3) {
-  -webkit-animation: fade-in 1s 11.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          animation: fade-in 1s 11.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  -webkit-animation: fade-in 1s 13.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 1s 13.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 .center__hp .text.appear span:nth-child(4) {
-  -webkit-animation: fade-in 1s 12s forwards cubic-bezier(0.11, 0, 0.5, 0);
-          animation: fade-in 1s 12s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  -webkit-animation: fade-in 1s 13.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+          animation: fade-in 1s 13.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 .disticds {
@@ -708,13 +708,6 @@ body {
   }
 }
 @-webkit-keyframes scroll-right {
-  50% {
-    background-repeat: no-repeat;
-    background-position: top right -41.5rem;
-    background-size: 96rem 44.1rem;
-    width: 54.5rem;
-    height: 44.1rem;
-  }
   100% {
     background-repeat: no-repeat;
     background-position: top right 0rem;
@@ -724,13 +717,6 @@ body {
   }
 }
 @keyframes scroll-right {
-  50% {
-    background-repeat: no-repeat;
-    background-position: top right -41.5rem;
-    background-size: 96rem 44.1rem;
-    width: 54.5rem;
-    height: 44.1rem;
-  }
   100% {
     background-repeat: no-repeat;
     background-position: top right 0rem;
