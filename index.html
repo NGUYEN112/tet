@@ -179,10 +179,10 @@
           <div class="newYear"><img src="./assets/img/3.png" alt="2" /></div>
         </div>
       </div>
-      <div class="center__hp">
+      <div class="center__hp scroll">
         <div class="scroll-sing"></div>
         <div class="scroll-haft"></div>
-        <p class="text appear">
+        <p class="text">
           <span>Chúc</span>
           <span>Mừng</span>
           <span>Năm</span>
@@ -217,6 +217,12 @@
         <span>Phúc</span>
       </div>
     </div>
+    <div class="clickMe bg-click">
+      <div class="btn-contain">
+        <button class="click">Bấm đây nè!!!</button>
+      </div>
+    </div>
+    <div class="bgMobile"></div>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/fscreen%401.0.1.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/Stage%400.1.4.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/MyMath.js"></script>
@@ -226,31 +232,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./script.js"></script>
-    <script>
-      $(window).ready(function () {
-        setTimeout(changeYear, 500);
-        setTimeout(changePositionYear, 2000);
-        setTimeout(appearDisticd, 13300);
-      });
-      function changeYear() {
-        $(".oldYear").addClass("out");
-        $(".newYear").addClass("in");
-      }
-      function changePositionYear() {
-        $(".center__year").addClass("changePosi");
-      }
-      function appearDisticd() {
-        $(".first").addClass("appear");
-        setTimeout(function () {
-          $(".second.disticd").addClass("appear");
-        }, 1000);
-        setTimeout(function () {
-          $(".third.disticd").addClass("appear");
-        }, 2000);
-        setTimeout(function () {
-          $(".four.disticd").addClass("appear");
-        }, 3000);
-      }
-    </script>
+    <script></script>
   </body>
 </html>

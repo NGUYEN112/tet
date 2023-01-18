@@ -108,7 +108,7 @@ const store = {
   state: {
     // will be unpaused in init()
     paused: true,
-    soundEnabled: false,
+    soundEnabled: true,
     menuOpen: false,
     openHelpTopic: null,
     fullscreen: isFullscreen(),
@@ -2300,18 +2300,72 @@ const soundManager = {
 // }
 
 // CodePen profile header doesn't need audio, just initialize.
-if (IS_HEADER) {
-  init();
-} else {
-  // Allow status to render, then preload assets and start app.
-  // setLoadingStatus("Lighting Fuses");
-  setTimeout(() => {
+function startFireWork() {
+  if (IS_HEADER) {
+    init();
+  } else {
+    // Allow status to render, then preload assets and start app.
+    // setLoadingStatus("Lighting Fuses");
     soundManager.preload().then(init, (reason) => {
       // Codepen preview doesn't like to load the audio, so just init to fix the preview for now.
       init();
-
       // setLoadingStatus('Error Loading Audio');
       return Promise.reject(reason);
     });
+  }
+}
+
+$(".click").click(function () {
+  $(".clickMe").addClass("hide");
+  setTimeout(function () {
+    $(".clickMe").addClass("hidden");
+  }, 500);
+  setTimeout(changeYear, 1000);
+  setTimeout(changePositionYear, 2500);
+  setTimeout(startFireWork, 3500);
+  setTimeout(showScroll, 8500);
+  if ($(window).outerWidth() <= 768) {
+    setTimeout(function () {
+      $(".bgMobile").addClass("show");
+    }, 16000);
+    setTimeout(appearDisticd, 16500);
+  } else {
+    setTimeout(appearDisticd, 13800);
+  }
+});
+function changeYear() {
+  $(".oldYear").addClass("out");
+  $(".newYear").addClass("in");
+}
+function changePositionYear() {
+  $(".center__year").addClass("changePosi");
+}
+function showScroll() {
+  $(".scroll").addClass("show");
+  setTimeout(function () {
+    $(".scroll-haft").addClass("scroll-right");
+  }, 1000);
+  setTimeout(function () {
+    $(".text").addClass("appear");
+  }, 3800);
+}
+function appearDisticd() {
+  $(".first").addClass("appear");
+  setTimeout(function () {
+    $(".second.disticd").addClass("appear");
+  }, 1000);
+  setTimeout(function () {
+    $(".third.disticd").addClass("appear");
+  }, 2000);
+  setTimeout(function () {
+    $(".four.disticd").addClass("appear");
   }, 3000);
 }
+
+$(".bgMobile").click(function () {
+  $(".bgMobile").removeClass("show");
+  $(".first").removeClass("appear");
+  $(".second.disticd").removeClass("appear");
+  $(".third.disticd").removeClass("appear");
+  $(".four.disticd").removeClass("appear");
+});
